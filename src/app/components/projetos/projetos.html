@@ -1,0 +1,29 @@
+<section class="projetos">
+  <div class="projetos__header">
+    <h2 class="projetos__titulo">Projetos</h2>
+    <p class="projetos__subtitulo">Prática que transforma estudo em portfólio</p>
+  </div>
+
+  <div class="projetos__grid">
+    @for (projeto of projetos(); track projeto.nome) {
+      <article
+        class="projetos__card"
+        [class.projetos__card--destaque]="projeto.destaque"
+      >
+        <div class="projetos__topo">
+          <h3 class="projetos__nome">{{ projeto.nome }}</h3>
+          <span class="projetos__status projetos__status--{{ projeto.status.toLowerCase().replace(' ', '-') }}">
+            @if (projeto.status === 'Em andamento') { 🚧 Em andamento }
+            @else { ✅ Concluído }
+          </span>
+        </div>
+        <p class="projetos__descricao">{{ projeto.descricao }}</p>
+        <div class="projetos__tags">
+          @for (tech of projeto.tecnologias; track tech) {
+            <span class="projetos__tag">{{ tech }}</span>
+          }
+        </div>
+      </article>
+    }
+  </div>
+</section>

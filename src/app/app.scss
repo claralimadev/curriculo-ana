@@ -1,0 +1,82 @@
+@use '../styles/mixins' as *;
+
+:host {
+  display: block;
+  position: relative;
+}
+
+.circuito {
+  position: fixed;
+  top: -600px;
+  bottom: -600px;
+  width: 420px;
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 0;
+  will-change: transform;
+
+  &--esquerda {
+    left: 0;
+    background-image: url('/circuit.svg');
+    background-repeat: repeat-y;
+    background-position: left top;
+    mask-image: linear-gradient(to right, black 35%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 35%, transparent 100%);
+  }
+
+  &--direita {
+    right: 0;
+    background-image: url('/circuit.svg');
+    background-repeat: repeat-y;
+    background-position: right top;
+    mask-image: linear-gradient(to left, black 35%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to left, black 35%, transparent 100%);
+  }
+
+  @include desktop {
+    width: 520px;
+  }
+
+  @include wide {
+    width: 600px;
+  }
+}
+
+.app-container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: var(--space-md);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  position: relative;
+  z-index: 1;
+
+  @include tablet {
+    padding: var(--space-xl);
+    gap: var(--space-3xl);
+  }
+
+  @include desktop {
+    padding: var(--space-3xl) var(--space-xl);
+  }
+}
+
+// Animações de entrada escalonadas (Fase 6)
+app-hero        { animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.05s both; }
+app-projetos    { animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.15s both; }
+app-skills      { animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.25s both; }
+app-experiencia { animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.35s both; }
+app-contato     { animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.45s both; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

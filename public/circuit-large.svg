@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none" stroke="#a78bfa" stroke-width="2">
+  <circle cx="30" cy="26" r="5" fill="#a78bfa" stroke="none"/>
+  <path d="M30 26 H 190 V 72 H 90 V 130 H 210 V 180 H 120 V 240 H 240"/>
+  <circle cx="240" cy="240" r="6" fill="#a78bfa" stroke="none"/>
+  <path d="M340 20 V 70 H 430 V 130 H 300 V 190 H 390 V 250"/>
+  <circle cx="390" cy="250" r="5" fill="#a78bfa" stroke="none"/>
+  <path d="M50 180 V 230 H 170 V 280 H 70 V 330"/>
+  <circle cx="50" cy="180" r="4" fill="#a78bfa" stroke="none"/>
+  <circle cx="70" cy="330" r="5" fill="#a78bfa" stroke="none"/>
+  <path d="M300 300 V 260 H 240 V 330"/>
+  <circle cx="300" cy="300" r="4" fill="#a78bfa" stroke="none"/>
+  <circle cx="240" cy="330" r="4" fill="#a78bfa" stroke="none"/>
+  <path d="M450 300 H 420 V 340 H 350"/>
+  <circle cx="450" cy="300" r="4" fill="#a78bfa" stroke="none"/>
+  <path d="M110 60 V 100 H 160 V 150 H 60"/>
+  <circle cx="60" cy="150" r="4" fill="#a78bfa" stroke="none"/>
+  <path d="M230 90 H 280 V 140 H 180 V 200"/>
+  <circle cx="180" cy="200" r="4" fill="#a78bfa" stroke="none"/>
+</svg>

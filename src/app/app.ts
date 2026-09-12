@@ -1,0 +1,30 @@
+import { Component, signal, computed, HostListener } from '@angular/core';
+import { HeroComponent } from './components/hero/hero';
+import { ProjetosComponent } from './components/projetos/projetos';
+import { SkillsComponent } from './components/skills/skills';
+import { ExperienciaComponent } from './components/experiencia/experiencia';
+import { ContatoComponent } from './components/contato/contato';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [
+    HeroComponent,
+    ProjetosComponent,
+    SkillsComponent,
+    ExperienciaComponent,
+    ContatoComponent
+  ],
+  templateUrl: './app.html',
+  styleUrl: './app.scss'
+})
+export class App {
+  private scroll = signal(0);
+  protected parallaxEsq = computed(() => `translateY(${this.scroll() * -0.07}px)`);
+  protected parallaxDir = computed(() => `translateY(${this.scroll() * -0.07}px)`);
+
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    this.scroll.set(window.scrollY);
+  }
+}
