@@ -1,0 +1,22 @@
+<section class="experiencia">
+  <div class="experiencia__header">
+    <h2 class="experiencia__titulo">Trajetória & Experiência</h2>
+    <p class="experiencia__subtitulo">Minha jornada na tecnologia, formação e projetos</p>
+  </div>
+
+  <div class="timeline">
+    @for (item of experiencias(); track item.titulo) {
+      <div class="timeline__item">
+        <div class="timeline__conteudo">
+          <div class="timeline__topo">
+            <span class="timeline__ano">{{ item.ano }}</span>
+            <span class="timeline__badge">{{ item.badge }}</span>
+          </div>
+          <h3 class="timeline__titulo-item">{{ item.titulo }}</h3>
+          <h4 class="timeline__instituicao">{{ item.instituicao }}</h4>
+          <p class="timeline__descricao">{{ item.descricao }}</p>
+        </div>
+      </div>
+    }
+  </div>
+</section>

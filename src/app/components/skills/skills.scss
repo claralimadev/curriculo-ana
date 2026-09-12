@@ -1,0 +1,170 @@
+@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+
+  &__header {
+    text-align: left;
+  }
+
+  &__titulo {
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 40px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: var(--radius-full);
+    }
+  }
+
+  &__subtitulo {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-top: var(--space-sm);
+  }
+
+  &__filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  &__filtro-btn {
+    padding: var(--space-xs) var(--space-md);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-full);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+
+    &:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    &--ativo {
+      background: var(--accent);
+      color: var(--bg-primary);
+      border-color: var(--accent);
+      font-weight: 600;
+      box-shadow: var(--shadow-glow);
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    @include glass(12px, 0.04);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    transition: transform var(--transition-normal), border-color var(--transition-normal);
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(167, 139, 250, 0.3);
+      box-shadow: var(--shadow-md);
+    }
+
+    &-topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-nome {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-primary);
+    }
+
+    &-categoria {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2px 8px;
+      border-radius: var(--radius-sm);
+    }
+
+    &-rodape {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: var(--space-xs);
+    }
+  }
+
+  &__badge-status {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    &--praticando {
+      background: rgba(167, 139, 250, 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(167, 139, 250, 0.25);
+    }
+
+    &--estudando {
+      background: rgba(168, 85, 247, 0.12);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.25);
+    }
+
+    &--conhecendo {
+      background: rgba(59, 130, 246, 0.12);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.25);
+    }
+
+    &--formacao {
+      background: rgba(250, 204, 21, 0.12);
+      color: #facc15;
+      border: 1px solid rgba(250, 204, 21, 0.25);
+    }
+  }
+
+  &__vazio {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: var(--space-xl);
+    color: var(--text-muted);
+  }
+}

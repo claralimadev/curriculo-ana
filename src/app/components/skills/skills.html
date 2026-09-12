@@ -1,0 +1,41 @@
+<section class="skills">
+  <div class="skills__header">
+    <h2 class="skills__titulo">Habilidades Técnicas</h2>
+    <p class="skills__subtitulo">Conhecimentos da minha formação técnica e do meu 1º semestre em desenvolvimento web</p>
+  </div>
+
+  <!-- Filtros Interativos -->
+  <div class="skills__filtros" role="group" aria-label="Filtro por categoria">
+    @for (cat of categorias(); track cat) {
+      <button
+        type="button"
+        class="skills__filtro-btn"
+        [class.skills__filtro-btn--ativo]="filtroAtivo() === cat"
+        (click)="setFiltro(cat)">
+        {{ cat }}
+      </button>
+    }
+  </div>
+
+  <!-- Grid de Cards de Skills -->
+  <div class="skills__grid">
+    @for (skill of skillsFiltradas(); track skill.nome) {
+      <div class="skills__card">
+        <div class="skills__card-topo">
+          <span class="skills__card-nome">{{ skill.nome }}</span>
+          <span class="skills__card-categoria">{{ skill.categoria }}</span>
+        </div>
+        <div class="skills__card-rodape">
+          <span class="skills__badge-status skills__badge-status--{{ skill.status.toLowerCase() }}">
+            @if (skill.status === 'Praticando') { 🔨 Praticando }
+            @if (skill.status === 'Estudando') { 🌱 Estudando }
+            @if (skill.status === 'Conhecendo') { 💡 Conhecendo }
+            @if (skill.status === 'Formação') { 🎓 Formação }
+          </span>
+        </div>
+      </div>
+    } @empty {
+      <p class="skills__vazio">Nenhuma habilidade encontrada nesta categoria.</p>
+    }
+  </div>
+</section>

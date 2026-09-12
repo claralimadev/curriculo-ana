@@ -1,0 +1,127 @@
+@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+}
+
+.projetos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+
+  &__header {
+    text-align: left;
+  }
+
+  &__titulo {
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 40px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: var(--radius-full);
+    }
+  }
+
+  &__subtitulo {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-top: var(--space-sm);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__card {
+    @include glass(12px, 0.04);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    transition: transform var(--transition-normal), border-color var(--transition-normal);
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(167, 139, 250, 0.3);
+      box-shadow: var(--shadow-md);
+    }
+
+    &--destaque {
+      border-color: rgba(167, 139, 250, 0.25);
+      background: radial-gradient(circle at top right, rgba(167, 139, 250, 0.07), transparent 70%), rgba(255, 255, 255, 0.04);
+    }
+  }
+
+  &__topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  &__nome {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+  }
+
+  &__status {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+
+    &--em-andamento {
+      background: rgba(250, 204, 21, 0.12);
+      color: #facc15;
+      border: 1px solid rgba(250, 204, 21, 0.25);
+    }
+
+    &--concluído {
+      background: rgba(167, 139, 250, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(167, 139, 250, 0.25);
+    }
+  }
+
+  &__descricao {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-top: var(--space-xs);
+  }
+
+  &__tag {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+  }
+}
