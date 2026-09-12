@@ -22,6 +22,7 @@ export class App {
   private scroll = signal(0);
   protected parallaxEsq = computed(() => `translateY(${this.scroll() * -0.07}px)`);
   protected parallaxDir = computed(() => `translateY(${this.scroll() * -0.07}px)`);
+  protected circuitBg = `url("${new URL('circuit.svg', document.baseURI).href}")`;
 
   @HostListener('window:scroll', [])
   onScroll(): void {
