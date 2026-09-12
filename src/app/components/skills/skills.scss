@@ -134,7 +134,13 @@
     border-radius: var(--radius-full);
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
+
+    &-icone {
+      font-size: 1.15rem;
+      line-height: 1;
+      filter: drop-shadow(0 0 8px var(--accent-glow));
+    }
 
     &--praticando {
       background: rgba(167, 139, 250, 0.1);

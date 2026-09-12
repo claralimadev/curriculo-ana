@@ -46,6 +46,12 @@
     line-height: 1.5;
   }
 
+  &__icone {
+    font-size: 1.15rem;
+    line-height: 1;
+    filter: drop-shadow(0 0 8px var(--accent-glow));
+  }
+
   &__acoes {
     display: flex;
     flex-direction: column;
@@ -110,11 +116,15 @@
 
     &-icone {
       flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      filter: drop-shadow(0 0 8px var(--accent-glow));
     }
 
     &-arrow {
       font-size: 0.85rem;
       transition: transform var(--transition-fast);
+      filter: drop-shadow(0 0 6px var(--accent-glow));
     }
 
     &:hover &-arrow {
