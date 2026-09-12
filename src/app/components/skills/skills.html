@@ -27,10 +27,10 @@
         </div>
         <div class="skills__card-rodape">
           <span class="skills__badge-status skills__badge-status--{{ skill.status.toLowerCase() }}">
-            @if (skill.status === 'Praticando') { 🔨 Praticando }
-            @if (skill.status === 'Estudando') { 🌱 Estudando }
-            @if (skill.status === 'Conhecendo') { 💡 Conhecendo }
-            @if (skill.status === 'Formação') { 🎓 Formação }
+            @if (skill.status === 'Praticando') { <span class="skills__status-icone">🔨</span> Praticando }
+            @if (skill.status === 'Estudando') { <span class="skills__status-icone">🌱</span> Estudando }
+            @if (skill.status === 'Conhecendo') { <span class="skills__status-icone">💡</span> Conhecendo }
+            @if (skill.status === 'Formação') { <span class="skills__status-icone">🎓</span> Formação }
           </span>
         </div>
       </div>

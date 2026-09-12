@@ -89,6 +89,15 @@
     padding: 3px 10px;
     border-radius: var(--radius-full);
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    &-icone {
+      font-size: 1.1rem;
+      line-height: 1;
+      filter: drop-shadow(0 0 8px var(--accent-glow));
+    }
 
     &--em-andamento {
       background: rgba(250, 204, 21, 0.12);

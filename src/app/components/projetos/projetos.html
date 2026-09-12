@@ -13,8 +13,8 @@
         <div class="projetos__topo">
           <h3 class="projetos__nome">{{ projeto.nome }}</h3>
           <span class="projetos__status projetos__status--{{ projeto.status.toLowerCase().replace(' ', '-') }}">
-            @if (projeto.status === 'Em andamento') { 🚧 Em andamento }
-            @else { ✅ Concluído }
+            @if (projeto.status === 'Em andamento') { <span class="projetos__status-icone">🚧</span> Em andamento }
+            @else { <span class="projetos__status-icone">✅</span> Concluído }
           </span>
         </div>
         <p class="projetos__descricao">{{ projeto.descricao }}</p>

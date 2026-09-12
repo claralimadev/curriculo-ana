@@ -15,6 +15,16 @@
   z-index: 0;
   will-change: transform;
 
+  &--fundo {
+    left: 0;
+    right: 0;
+    width: auto;
+    background-repeat: repeat;
+    background-size: 280px 520px;
+    opacity: 0.1;
+    will-change: auto;
+  }
+
   &--esquerda {
     left: 0;
     background-repeat: repeat-y;
@@ -37,6 +47,18 @@
 
   @include wide {
     width: 600px;
+  }
+
+  @media (max-width: 767px) {
+    &--esquerda,
+    &--direita {
+      width: 110px;
+      opacity: 0.22;
+    }
+
+    &--fundo {
+      opacity: 0.08;
+    }
   }
 }
 
