@@ -1,4 +1,4 @@
-<div class="circuito circuito--esquerda" [style.transform]="parallaxEsq()" aria-hidden="true"></div>
+<div class="circuito circuito--esquerda" [style.transform]="parallaxEsq()" [style.background-image]="circuitBg" aria-hidden="true"></div>
 <main class="app-container">
   <app-hero />
   <app-projetos />
@@ -6,7 +6,7 @@
   <app-experiencia />
   <app-contato />
 </main>
-<div class="circuito circuito--direita" [style.transform]="parallaxDir()" aria-hidden="true"></div>
+<div class="circuito circuito--direita" [style.transform]="parallaxDir()" [style.background-image]="circuitBg" aria-hidden="true"></div>
 <!--
   :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
