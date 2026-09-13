@@ -11,7 +11,7 @@
   bottom: -600px;
   width: 420px;
   pointer-events: none;
-  opacity: 0.4;
+  opacity: var(--lado-opacity, 0.4);
   z-index: 0;
   will-change: transform;
 
@@ -37,6 +37,10 @@
 
   @include wide {
     width: 600px;
+  }
+
+  @include tablet {
+    opacity: 0.4;
   }
 }
 
