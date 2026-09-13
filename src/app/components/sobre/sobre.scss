@@ -1,0 +1,108 @@
+@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+}
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+
+  &__header {
+    text-align: left;
+  }
+
+  &__titulo {
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 40px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: var(--radius-full);
+    }
+  }
+
+  &__subtitulo {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-top: var(--space-sm);
+  }
+
+  &__conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+
+    @include desktop {
+      flex-direction: row;
+      gap: var(--space-2xl);
+    }
+  }
+
+  &__texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  &__fatos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+    align-content: flex-start;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include desktop {
+      grid-template-columns: 1fr;
+      min-width: 260px;
+    }
+  }
+
+  &__fato {
+    @include glass(12px, 0.04);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(167, 139, 250, 0.15);
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    transition: border-color var(--transition-normal), transform var(--transition-normal);
+
+    &:hover {
+      border-color: rgba(167, 139, 250, 0.4);
+      transform: translateY(-2px);
+    }
+
+    &-rotulo {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    &-valor {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+  }
+}

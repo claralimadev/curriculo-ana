@@ -1,0 +1,35 @@
+<section class="sobre">
+  <div class="sobre__header">
+    <h2 class="sobre__titulo">Sobre mim</h2>
+    <p class="sobre__subtitulo">Um pouco de quem sou e do que acredito</p>
+  </div>
+
+  <div class="sobre__conteudo">
+    <div class="sobre__texto">
+      <p>
+        Sou desenvolvedora frontend em formação, técnica em Mecatrônica pelo SENAI e estudante de
+        Engenharia de Software na UniAteneu. Hoje integro o Squad Proenergia no Hackathon
+        Proenergia Summit 2026, unindo a base técnica de automação industrial e IoT ao universo
+        das interfaces web modernas.
+      </p>
+      <p>
+        Minha formação em Mecatrônica me ensinou a enxergar sistemas por inteiro — do sensor ao
+        código. O que me move é construir interfaces que combinam essa precisão técnica com um
+        design que todas as pessoas consigam usar.
+      </p>
+      <p>
+        Acredito que a web precisa ser um lugar para todo mundo, por isso estudo acessibilidade
+        e inclusão todos os dias — para que nenhuma pessoa fique de fora da experiência digital.
+      </p>
+    </div>
+
+    <div class="sobre__fatos">
+      @for (fato of fatos; track fato.rotulo) {
+        <div class="sobre__fato">
+          <span class="sobre__fato-rotulo">{{ fato.rotulo }}</span>
+          <span class="sobre__fato-valor">{{ fato.valor }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>
