@@ -1,0 +1,23 @@
+<header class="navbar">
+  <a href="#inicio" class="navbar__logo" aria-label="Voltar ao início">AC</a>
+
+  <button
+    type="button"
+    class="navbar__toggle"
+    [attr.aria-expanded]="aberto()"
+    aria-label="Abrir menu"
+    (click)="toggle()">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </button>
+
+  <nav class="navbar__links" [class.navbar__links--aberto]="aberto()" aria-label="Navegação principal">
+    <a href="#inicio" (click)="aberto.set(false)">Início</a>
+    <a href="#sobre" (click)="aberto.set(false)">Sobre mim</a>
+    <a href="#projetos" (click)="aberto.set(false)">Projetos</a>
+    <a href="#habilidades" (click)="aberto.set(false)">Habilidades</a>
+    <a href="#trajetoria" (click)="aberto.set(false)">Trajetória</a>
+    <a href="#contato" (click)="aberto.set(false)">Contato</a>
+  </nav>
+</header>

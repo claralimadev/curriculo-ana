@@ -29,9 +29,10 @@
         var style = document.createElement('style');
         style.textContent = [
           '#vlibras-popup { display: none !important; }',
-          '#vlibras-access { top: 64px !important; right: 12px !important; left: auto !important; width: 40px !important; height: 40px !important; transform: scale(0.8); transform-origin: top right; }',
-          '#vlibras-button { width: 40px !important; height: 40px !important; }',
-          '@media (max-width: 767px) { #vlibras-access { top: 12px !important; right: 8px !important; transform: scale(0.72); } }'
+          '#vlibras-access { top: 64px !important; right: 16px !important; left: auto !important; width: 46px !important; height: 46px !important; }',
+          '#vlibras-button { width: 46px !important; height: 46px !important; }',
+          '#vlibras-button img { width: 100% !important; height: 100% !important; object-fit: contain !important; filter: brightness(0) invert(1) sepia(1) saturate(6) hue-rotate(235deg) drop-shadow(0 0 7px rgba(167, 139, 250, 0.95)) !important; }',
+          '@media (max-width: 767px) { #vlibras-access { top: 12px !important; right: 10px !important; width: 40px !important; height: 40px !important; } #vlibras-button { width: 40px !important; height: 40px !important; } }'
         ].join('\n');
         wrapper.shadowRoot.appendChild(style);
       } else {
