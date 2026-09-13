@@ -87,10 +87,10 @@ app-contato     { animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.45s bo
   }
 }
 
-// No mobile as laterais ficam bem mais suaves (detalhe ao fundo)
+// No mobile as laterais são removidas (fundo limpo em roxo escuro)
 @media (max-width: 767px) {
   .circuito--esquerda,
   .circuito--direita {
-    opacity: calc(var(--lado-opacity, 0.4) * 0.45);
+    display: none;
   }
 }
