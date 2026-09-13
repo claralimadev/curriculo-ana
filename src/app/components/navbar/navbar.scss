@@ -30,6 +30,36 @@
     text-shadow: 0 0 14px var(--accent-glow);
   }
 
+  &__ler {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: rgba(167, 139, 250, 0.12);
+    border: 1px solid rgba(167, 139, 250, 0.35);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: background var(--transition-fast), box-shadow var(--transition-fast);
+
+    &:hover,
+    &--ativo {
+      background: rgba(167, 139, 250, 0.22);
+      box-shadow: 0 0 14px rgba(167, 139, 250, 0.5);
+    }
+
+    @include mobile {
+      padding: 6px 10px;
+
+      .navbar__ler-texto {
+        display: none;
+      }
+    }
+  }
+
   &__toggle {
     display: inline-flex;
     flex-direction: column;

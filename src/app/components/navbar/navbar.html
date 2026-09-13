@@ -3,6 +3,17 @@
 
   <button
     type="button"
+    class="navbar__ler"
+    [class.navbar__ler--ativo]="lendo()"
+    [attr.aria-pressed]="lendo()"
+    [attr.aria-label]="lendo() ? 'Parar de ler em voz alta' : 'Ler a página em voz alta'"
+    (click)="ler()">
+    <span aria-hidden="true">{{ lendo() ? '⏹' : '🔊' }}</span>
+    <span class="navbar__ler-texto">{{ lendo() ? 'Parar' : 'Ouvir' }}</span>
+  </button>
+
+  <button
+    type="button"
     class="navbar__toggle"
     [attr.aria-expanded]="aberto()"
     aria-label="Abrir menu"
