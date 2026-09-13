@@ -14,11 +14,12 @@
   }
 
   &__titulo {
-    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
-    font-weight: 700;
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    font-weight: 800;
     color: var(--text-primary);
     position: relative;
     display: inline-block;
+    text-shadow: 0 0 22px var(--accent-glow);
 
     &::after {
       content: '';
@@ -55,8 +56,8 @@
     flex-direction: column;
     gap: var(--space-md);
     color: var(--text-secondary);
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 1.08rem;
+    line-height: 1.8;
   }
 
   &__fatos {

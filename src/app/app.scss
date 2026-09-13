@@ -60,6 +60,10 @@
     gap: var(--space-3xl);
   }
 
+  @include mobile {
+    padding: var(--space-md);
+  }
+
   @include desktop {
     padding: var(--space-3xl) var(--space-xl);
   }
