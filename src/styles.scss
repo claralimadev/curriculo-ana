@@ -73,3 +73,13 @@ body {
     --text-muted: #b6c2d4;
   }
 }
+
+// VLibras: botão menor para não invadir a tela
+[vw-access-button] {
+  transform: scale(0.75) !important;
+  transform-origin: bottom right !important;
+
+  @media (max-width: 767px) {
+    transform: scale(0.65) !important;
+  }
+}
