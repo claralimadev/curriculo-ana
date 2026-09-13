@@ -1,5 +1,6 @@
 import { Component, signal, computed, HostListener } from '@angular/core';
 import { HeroComponent } from './components/hero/hero';
+import { SobreComponent } from './components/sobre/sobre';
 import { ProjetosComponent } from './components/projetos/projetos';
 import { SkillsComponent } from './components/skills/skills';
 import { ExperienciaComponent } from './components/experiencia/experiencia';
@@ -10,6 +11,7 @@ import { ContatoComponent } from './components/contato/contato';
   standalone: true,
   imports: [
     HeroComponent,
+    SobreComponent,
     ProjetosComponent,
     SkillsComponent,
     ExperienciaComponent,
