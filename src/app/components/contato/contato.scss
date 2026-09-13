@@ -89,6 +89,33 @@
     }
   }
 
+  &__btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-full);
+    background: #25d366;
+    color: var(--bg-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    box-shadow: 0 0 24px rgba(37, 211, 102, 0.35);
+
+    &:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
   &__links {
     display: flex;
     gap: var(--space-sm);

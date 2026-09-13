@@ -25,7 +25,7 @@ export class App {
   protected parallaxEsq = computed(() => `translateY(${this.scroll() * -0.07}px)`);
   protected parallaxDir = computed(() => `translateY(${this.scroll() * -0.07}px)`);
   protected circuitBg = `url("${new URL('circuit.svg', document.baseURI).href}")`;
-  protected ladoOpacity = computed(() => Math.min(this.scroll() / 700, 1).toFixed(3));
+  protected ladoOpacity = computed(() => Math.min(Math.max((this.scroll() - 650) / 700, 0), 1).toFixed(3));
 
   @HostListener('window:scroll', [])
   onScroll(): void {

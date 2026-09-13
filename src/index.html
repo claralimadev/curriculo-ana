@@ -22,7 +22,21 @@
   </div>
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    new window.VLibras.Widget({ rootPath: 'https://vlibras.gov.br/app', position: 'l' });
+    (function ajustarVlibras() {
+      var wrapper = document.getElementById('vlibras-access-wrapper');
+      if (wrapper && wrapper.shadowRoot) {
+        var style = document.createElement('style');
+        style.textContent = [
+          '#vlibras-access { top: 16px !important; left: 12px !important; right: auto !important; width: 40px !important; height: 40px !important; }',
+          '#vlibras-button { width: 40px !important; height: 40px !important; }',
+          '@media (max-width: 767px) { #vlibras-access { top: 12px !important; left: 8px !important; } }'
+        ].join('\n');
+        wrapper.shadowRoot.appendChild(style);
+      } else {
+        setTimeout(ajustarVlibras, 200);
+      }
+    })();
   </script>
 </body>
 </html>
