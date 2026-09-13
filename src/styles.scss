@@ -9,8 +9,8 @@
 
   // Cores de Texto
   --text-primary: #f8fafc;
-  --text-secondary: #e7ecf5;
-  --text-muted: #b6c2d4;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
 
   // Cor de Destaque (Violeta / Roxo Neon)
   --accent: #a78bfa;
@@ -64,4 +64,12 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+}
+
+// No mobile, os textos ficam mais claros para melhor leitura
+@media (max-width: 767px) {
+  :root {
+    --text-secondary: #e7ecf5;
+    --text-muted: #b6c2d4;
+  }
 }
