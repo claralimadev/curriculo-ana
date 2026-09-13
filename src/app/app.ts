@@ -1,4 +1,4 @@
-import { Component, signal, computed, HostListener } from '@angular/core';
+import { Component, signal, computed, HostListener, AfterViewInit } from '@angular/core';
 import { HeroComponent } from './components/hero/hero';
 import { SobreComponent } from './components/sobre/sobre';
 import { ProjetosComponent } from './components/projetos/projetos';
@@ -20,12 +20,23 @@ import { ContatoComponent } from './components/contato/contato';
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
+export class App implements AfterViewInit {
   private scroll = signal(0);
+  private projetosTop = 1200;
   protected parallaxEsq = computed(() => `translateY(${this.scroll() * -0.07}px)`);
   protected parallaxDir = computed(() => `translateY(${this.scroll() * -0.07}px)`);
   protected circuitBg = `url("${new URL('circuit.svg', document.baseURI).href}")`;
-  protected ladoOpacity = computed(() => Math.min(Math.max((this.scroll() - 650) / 700, 0), 1).toFixed(3));
+  protected ladoOpacity = computed(() => {
+    const progresso = (this.scroll() - this.projetosTop) / 1000;
+    return Math.min(Math.max(progresso, 0), 1).toFixed(3);
+  });
+
+  ngAfterViewInit(): void {
+    const el = document.querySelector('app-projetos');
+    if (el) {
+      this.projetosTop = el.getBoundingClientRect().top + window.scrollY;
+    }
+  }
 
   @HostListener('window:scroll', [])
   onScroll(): void {
