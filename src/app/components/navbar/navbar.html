@@ -1,5 +1,5 @@
 <header class="navbar">
-  <a href="#inicio" class="navbar__logo" aria-label="Voltar ao início">AC</a>
+  <a href="#inicio" class="navbar__logo" (click)="navegar($event, '#inicio')">AC</a>
 
   <button
     type="button"
@@ -13,11 +13,11 @@
   </button>
 
   <nav class="navbar__links" [class.navbar__links--aberto]="aberto()" aria-label="Navegação principal">
-    <a href="#inicio" (click)="aberto.set(false)">Início</a>
-    <a href="#sobre" (click)="aberto.set(false)">Sobre mim</a>
-    <a href="#projetos" (click)="aberto.set(false)">Projetos</a>
-    <a href="#habilidades" (click)="aberto.set(false)">Habilidades</a>
-    <a href="#trajetoria" (click)="aberto.set(false)">Trajetória</a>
-    <a href="#contato" (click)="aberto.set(false)">Contato</a>
+    <a href="#inicio" (click)="navegar($event, '#inicio')">Início</a>
+    <a href="#sobre" (click)="navegar($event, '#sobre')">Sobre</a>
+    <a href="#projetos" (click)="navegar($event, '#projetos')">Projetos</a>
+    <a href="#habilidades" (click)="navegar($event, '#habilidades')">Habilidades</a>
+    <a href="#trajetoria" (click)="navegar($event, '#trajetoria')">Trajetória</a>
+    <a href="#contato" (click)="navegar($event, '#contato')">Contato</a>
   </nav>
 </header>

@@ -22,7 +22,7 @@ export class ProjetosComponent {
       nome: 'Currículo Digital',
       descricao: 'Este site: currículo interativo em SPA com filtro de habilidades, linha do tempo e design responsivo.',
       tecnologias: ['Angular 22', 'SCSS', 'TypeScript'],
-      status: 'Em andamento',
+      status: 'Concluído',
       destaque: true
     },
     {
