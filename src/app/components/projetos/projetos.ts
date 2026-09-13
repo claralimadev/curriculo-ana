@@ -29,7 +29,7 @@ export class ProjetosComponent {
       nome: 'Hackathon Proenergia Summit',
       descricao: 'Aplicação web SPA unindo a sensibilidade de hardware e energia com interfaces modernas.',
       tecnologias: ['Angular 22', 'SCSS'],
-      status: 'Em andamento'
+      status: 'Concluído'
     },
     {
       nome: 'Circuitos & Sensores com Arduino',
