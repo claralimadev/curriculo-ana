@@ -1,0 +1,11 @@
+<button
+  type="button"
+  class="podcast"
+  [class.podcast--tocando]="tocando()"
+  [attr.aria-pressed]="tocando()"
+  [attr.aria-label]="tocando() ? 'Pausar o mini podcast lido em voz alta' : 'Ouvir um mini podcast sobre a Ana Clara em voz alta'"
+  [title]="tocando() ? 'Pausar mini podcast' : 'Ouvir mini podcast'"
+  (click)="alternar()">
+  <span class="podcast__icone" aria-hidden="true">{{ tocando() ? '⏸' : '▶' }}</span>
+  <span class="podcast__rotulo">{{ tocando() ? 'Parar' : 'Ouvir' }}</span>
+</button>

@@ -1,0 +1,63 @@
+@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+}
+
+.podcast {
+  position: fixed;
+  right: var(--space-lg);
+  bottom: var(--space-lg);
+  z-index: 120;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 14px 18px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: rgba(167, 139, 250, 0.14);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(167, 139, 250, 0.45);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(167, 139, 250, 0.35);
+  transition: background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+
+  &:hover {
+    background: rgba(167, 139, 250, 0.24);
+    box-shadow: 0 0 26px rgba(167, 139, 250, 0.55);
+    transform: translateY(-2px);
+  }
+
+  &--tocando {
+    background: rgba(250, 139, 192, 0.18);
+    border-color: rgba(250, 139, 192, 0.55);
+    box-shadow: 0 0 22px rgba(250, 139, 192, 0.5);
+  }
+
+  &__icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    font-size: 0.8rem;
+    color: var(--bg-primary);
+    background: var(--accent);
+    border-radius: 50%;
+    flex: none;
+  }
+
+  @include mobile {
+    right: var(--space-md);
+    bottom: var(--space-md);
+    padding: 12px 14px;
+
+    .podcast__rotulo {
+      display: none;
+    }
+  }
+}
