@@ -47,7 +47,7 @@
 .app-container {
   max-width: 920px;
   margin: 0 auto;
-  padding: var(--space-md);
+  padding: 96px var(--space-md) var(--space-md);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -55,17 +55,17 @@
   position: relative;
   z-index: 1;
 
+  @include mobile {
+    padding: 84px var(--space-md) var(--space-md);
+  }
+
   @include tablet {
-    padding: var(--space-xl);
+    padding: 96px var(--space-xl) var(--space-3xl);
     gap: var(--space-3xl);
   }
 
-  @include mobile {
-    padding: var(--space-md);
-  }
-
   @include desktop {
-    padding: var(--space-3xl) var(--space-xl);
+    padding: 112px var(--space-xl) var(--space-3xl);
   }
 }
 
@@ -84,5 +84,13 @@ app-contato     { animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.45s bo
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+// No mobile as laterais ficam bem mais suaves (detalhe ao fundo)
+@media (max-width: 767px) {
+  .circuito--esquerda,
+  .circuito--direita {
+    opacity: calc(var(--lado-opacity, 0.4) * 0.45);
   }
 }

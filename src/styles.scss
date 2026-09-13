@@ -66,6 +66,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+// Compensa a altura do navbar fixo ao rolar para as âncoras
+section,
+footer {
+  scroll-margin-top: 84px;
+}
+
 // No mobile, os textos ficam mais claros para melhor leitura
 @media (max-width: 767px) {
   :root {

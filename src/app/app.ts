@@ -1,4 +1,5 @@
 import { Component, signal, computed, HostListener, AfterViewInit } from '@angular/core';
+import { NavbarComponent } from './components/navbar/navbar';
 import { HeroComponent } from './components/hero/hero';
 import { SobreComponent } from './components/sobre/sobre';
 import { ProjetosComponent } from './components/projetos/projetos';
@@ -10,6 +11,7 @@ import { ContatoComponent } from './components/contato/contato';
   selector: 'app-root',
   standalone: true,
   imports: [
+    NavbarComponent,
     HeroComponent,
     SobreComponent,
     ProjetosComponent,
