@@ -19,7 +19,9 @@
     flex-direction: column;
     gap: var(--space-lg);
     border: 1px solid var(--border-subtle);
-    background: radial-gradient(circle at top right, rgba(167, 139, 250, 0.06), transparent 70%), var(--bg-card);
+    background:
+      radial-gradient(circle at top right, rgba(167, 139, 250, 0.06), transparent 70%),
+      var(--bg-card);
 
     @include tablet {
       flex-direction: row;
@@ -89,25 +91,31 @@
     }
   }
 
-  &__btn-whatsapp {
+  &__btn-github {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: var(--space-sm);
     padding: var(--space-sm) var(--space-lg);
     border-radius: var(--radius-full);
-    background: #25d366;
-    color: var(--bg-primary);
+    background: #24292f;
+    color: #ffffff;
     font-weight: 600;
     font-size: 0.9rem;
     border: none;
     cursor: pointer;
     text-decoration: none;
     transition: all var(--transition-fast);
-    box-shadow: 0 0 24px rgba(37, 211, 102, 0.35);
+    box-shadow: 0 0 24px rgba(36, 41, 47, 0.35);
+
+    &-icone {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+    }
 
     &:hover {
-      background: #1ebe5d;
+      background: #1b1f24;
       transform: translateY(-2px);
     }
 

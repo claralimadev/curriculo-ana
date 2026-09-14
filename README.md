@@ -1,59 +1,62 @@
-# CurriculoAna
+# 👩‍💻 Currículo Digital — Ana Clara Lima Ribeiro
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
+Um **currículo digital interativo** feito com **Angular 22** (TypeScript e SCSS), pensado para apresentar minha trajetória, projetos e habilidades de forma moderna e acessível.
 
-## Development server
+## 🔗 Acesse o currículo
 
-To start a local development server, run:
+### **https://claralimadev.github.io/curriculo-ana/**
+
+---
+
+## ✨ O que tem no currículo
+
+- **Hero** com nome, papel e bio resumida.
+- **Sobre mim** — história, formação e fatos rápidos.
+- **Habilidades (Skills)** — stack e competências.
+- **Projetos** — cards com status (🚧 Em andamento / ✅ Concluído), descrição e tecnologias.
+- **Trajetória & Experiência** — timeline de formação, SENAI, UniAteneu e Hackathon Proenergia Summit 2026.
+- **Contato** — botões diretos para **Gmail**, **GitHub** e **LinkedIn**.
+- **Podcast flutuante** 🎙️ que lê o currículo em voz alta (acessibilidade).
+- **VLibras** para acessibilidade em LIBRAS.
+- Layout responsivo, dark theme e scroll suave na navegação.
+
+---
+
+## 🛠️ Tecnologias
+
+- **Angular 22** (standalone components, signals, control flow `@for`)
+- TypeScript + SCSS (with CSS variables e mixins responsivos)
+- Deploy: **GitHub Pages** via **GitHub Actions**
+
+---
+
+## 🚀 Rodando localmente
 
 ```bash
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Abra `http://localhost:4200/`.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Build de produção (como o Actions faz)
 
 ```bash
-ng generate component component-name
+npm run build -- --base-href=/curriculo-ana/ --output-path=dist/curriculo-ana
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Testes
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 🚀 Deploy
 
-```bash
-ng e2e
-```
+Qualquer `push` na branch `main` publica automaticamente o site (workflow em `.github/workflows/deploy-pages.yml`).
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Feito por Ana Clara Lima Ribeiro** — veja também a [Pokédex](https://claralimadev.github.io/pokedex-app/) e outros projetos no [GitHub](https://github.com/claralimadev).
