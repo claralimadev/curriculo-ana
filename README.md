@@ -1,4 +1,4 @@
-# 👩‍💻 Currículo Digital — Ana Clara Lima Ribeiro
+# 👩‍💻 Currículo Digital — Ana Clara Lima 
 
 Um **currículo digital interativo** feito com **Angular 22** (TypeScript e SCSS), pensado para apresentar minha trajetória, projetos e habilidades de forma moderna e acessível.
 
@@ -59,4 +59,4 @@ Qualquer `push` na branch `main` publica automaticamente o site (workflow em `.g
 
 ---
 
-**Feito por Ana Clara Lima Ribeiro** — veja também a [Pokédex](https://claralimadev.github.io/pokedex-app/) e outros projetos no [GitHub](https://github.com/claralimadev).
+**Feito por Ana Clara Lima** — veja também a [Pokédex](https://claralimadev.github.io/pokedex-app/) e outros projetos no [GitHub](https://github.com/claralimadev).
