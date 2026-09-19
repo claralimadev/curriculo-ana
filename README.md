@@ -1,14 +1,14 @@
-# 👩‍💻 Currículo Digital — Ana Clara Lima 
+# Currículo Digital — Ana Clara Lima 
 
 Um **currículo digital interativo** feito com **Angular 22** (TypeScript e SCSS), pensado para apresentar minha trajetória, projetos e habilidades de forma moderna e acessível.
 
-## 🔗 Acesse o currículo
+## Acesse o currículo
 
 ### **https://claralimadev.github.io/curriculo-ana/**
 
 ---
 
-## ✨ O que tem no currículo
+## O que tem no currículo
 
 - **Hero** com nome, papel e bio resumida.
 - **Sobre mim** — história, formação e fatos rápidos.
@@ -16,13 +16,13 @@ Um **currículo digital interativo** feito com **Angular 22** (TypeScript e SCSS
 - **Projetos** — cards com status (🚧 Em andamento / ✅ Concluído), descrição e tecnologias.
 - **Trajetória & Experiência** — timeline de formação, SENAI, UniAteneu e Hackathon Proenergia Summit 2026.
 - **Contato** — botões diretos para **Gmail**, **GitHub** e **LinkedIn**.
-- **Podcast flutuante** 🎙️ que lê o currículo em voz alta (acessibilidade).
+- **Podcast flutuante** que lê o currículo em voz alta (acessibilidade).
 - **VLibras** para acessibilidade em LIBRAS.
 - Layout responsivo, dark theme e scroll suave na navegação.
 
 ---
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - **Angular 22** (standalone components, signals, control flow `@for`)
 - TypeScript + SCSS (with CSS variables e mixins responsivos)
@@ -30,7 +30,7 @@ Um **currículo digital interativo** feito com **Angular 22** (TypeScript e SCSS
 
 ---
 
-## 🚀 Rodando localmente
+## Rodando localmente
 
 ```bash
 npm install
@@ -53,7 +53,7 @@ ng test
 
 ---
 
-## 🚀 Deploy
+## Deploy
 
 Qualquer `push` na branch `main` publica automaticamente o site (workflow em `.github/workflows/deploy-pages.yml`).
 
