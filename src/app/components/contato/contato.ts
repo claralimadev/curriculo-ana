@@ -9,5 +9,5 @@ import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContatoComponent {
-  email = signal('anaclara.lr.dev@gmail.com');
+  email = signal('claralimadev@users.noreply.github.com');
 }
